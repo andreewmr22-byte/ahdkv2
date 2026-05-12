@@ -1,0 +1,32 @@
+{
+  "produtos_exemplo": [
+    {
+      "nome": "AHDK Boxy Tee — Washed Black",
+      "preco": "R$189,00",
+      "categoria": "Vestuário",
+      "descricao": "Camiseta boxy em preto lavado, algodão pesado e bordado tonal discreto.",
+      "imagem": "assets/49_boxy_tee_washed_black_AHDK.jpg"
+    },
+    {
+      "nome": "Porta Sedas e Piteiras",
+      "preco": "R$149,00",
+      "categoria": "Tabacaria",
+      "descricao": "Organizador de bancada para sedas, piteiras e pequenos itens.",
+      "imagem": "assets/28_porta_sedas_piteiras_AHDK.jpg"
+    },
+    {
+      "nome": "AHDK Boxy Hoodie — Black",
+      "preco": "R$359,00",
+      "categoria": "Vestuário",
+      "descricao": "Hoodie boxy em fleece pesado, capuz estruturado e aplicação discreta.",
+      "imagem": "assets/50_boxy_hoodie_black_AHDK.jpg"
+    },
+    {
+      "nome": "Piteira de Vidro AHDK",
+      "preco": "R$59,00",
+      "categoria": "Tabacaria",
+      "descricao": "Item compacto e discreto para compor kits de tabacaria.",
+      "imagem": "assets/05_piteira_de_vidro_AHDK.jpg"
+    }
+  ]
+}

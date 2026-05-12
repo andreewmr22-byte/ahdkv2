@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AHDK — Concept Pack Interativo</title>
+
+  <!-- Identidade tipográfica AHDK: títulos altos, espaçados e editoriais -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="brand-header">
+      <button class="header-menu" onclick="openCatalogHub(event)" aria-label="Abrir menu de categorias e coleções">
+        <span>☰</span>
+      </button>
+
+      <div class="brand-copy">
+        <h1 id="brandName">AHDK</h1>
+        <img class="brand-logo-top" src="assets/ahdk_logo_header.jpg" alt="" aria-hidden="true" />
+        <p id="profileLabel">Vestuário • tabacaria • séries limitadas</p>
+      </div>
+
+      <button class="header-cart" id="headerCartBtn" onclick="openCartDrawer()" aria-label="Abrir carrinho">
+        <span>BAG</span><b id="cartCount">0</b>
+      </button>
+      <button class="profile-toggle" id="profileBtn" aria-label="Alternar perfil">✦</button>
+    </header>
+
+    <section id="app" class="app-content"></section>
+
+    <nav class="bottom-nav" aria-label="Navegação principal" id="bottomNav">
+      <button class="nav active" data-page="home"><i>⌂</i><span>Início</span></button>
+      <button class="nav" data-page="produtos"><i>⌕</i><span>Catálogo</span></button>
+      <button class="nav" data-page="avisos"><i>✧</i><span>Drops</span></button>
+      <button class="nav" data-page="colecoes"><i>◇</i><span>Coleções</span></button>
+      <button class="nav" data-page="equipe"><i>☏</i><span>Atendimento</span></button>
+    </nav>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
