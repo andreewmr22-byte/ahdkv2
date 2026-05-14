@@ -3612,3 +3612,40 @@ body[data-profile="cliente"] .low-stock-card::before {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* V10.2 — padrão de espaçamento para evitar sobreposição visual */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.search,
+.featured-block,
+.catalog-overview,
+.quick-grid,
+.section,
+.stack,
+.kpis,
+.brand-ritual-card,
+.session-strip,
+.session-panel {
+  margin: 0 !important;
+}
+
+.hero-product-first .hero-media-clean img {
+  padding: 10px 8px 108px !important;
+}
+
+.hero-minimal-ui {
+  bottom: 72px;
+}
+
+.hero-product-first .hero-carousel-ui {
+  bottom: 24px;
+}
