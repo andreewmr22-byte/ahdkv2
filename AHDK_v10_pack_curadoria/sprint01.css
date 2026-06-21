@@ -1,0 +1,307 @@
+/* =========================================================
+   AHDK — Sprint 01 incremental layer
+   Objetivo: home mais premium, CTA claro e navegação pública.
+   ========================================================= */
+
+body.sprint01-active .brand-header {
+  padding-bottom: 14px;
+}
+
+.sprint01-hero {
+  min-height: 348px;
+  isolation: isolate;
+  border-color: rgba(201, 185, 157, .38);
+  box-shadow: 0 28px 76px rgba(0, 0, 0, .72), inset 0 0 0 1px rgba(255,255,255,.045);
+}
+
+.sprint01-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(115deg, rgba(5,4,3,.92) 0%, rgba(5,4,3,.54) 46%, rgba(5,4,3,.78) 100%),
+    radial-gradient(circle at 86% 12%, rgba(201,185,157,.22), transparent 28%);
+  pointer-events: none;
+}
+
+.sprint01-hero .badge,
+.sprint01-hero h2,
+.sprint01-hero p,
+.sprint01-hero .hero-actions,
+.sprint01-hero .sprint01-hero-kicker,
+.sprint01-hero .sprint01-hero-proof {
+  position: relative;
+  z-index: 2;
+}
+
+.sprint01-hero-kicker {
+  position: absolute !important;
+  top: 20px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(201,185,157,.34);
+  border-radius: 999px;
+  background: rgba(5,4,3,.52);
+  color: var(--sand);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px);
+}
+
+.sprint01-hero h2 {
+  max-width: 360px;
+  font-size: clamp(46px, 13.2vw, 62px);
+  letter-spacing: .05em;
+  text-shadow: 0 18px 34px rgba(0,0,0,.58);
+}
+
+.sprint01-hero p {
+  max-width: 320px;
+  color: rgba(239,231,216,.72);
+}
+
+.sprint01-hero-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.sprint01-proof-chip {
+  min-height: 48px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px;
+  background: rgba(5,4,3,.46);
+  color: var(--sand-soft);
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.sprint01-main-cta {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.10), 0 16px 34px rgba(155,125,79,.24);
+}
+
+.sprint01-home {
+  display: grid;
+  gap: 18px;
+  margin: 20px 0 6px;
+}
+
+.sprint01-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(201,185,157,.18);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(201,185,157,.12), transparent 34%),
+    linear-gradient(180deg, rgba(24,22,18,.96), rgba(8,7,5,.97));
+  box-shadow: 0 18px 48px rgba(0,0,0,.32);
+}
+
+.sprint01-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 4px 0 12px;
+}
+
+.sprint01-section-head h3 {
+  margin: 0;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.sprint01-section-head span {
+  color: var(--smoke);
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.sprint01-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.sprint01-category {
+  min-height: 112px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(35,32,26,.82), rgba(10,9,7,.92));
+  color: var(--bone);
+  text-align: left;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.025);
+}
+
+.sprint01-category i {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 13px;
+  border-radius: 14px;
+  background: rgba(201,185,157,.10);
+  color: var(--sand);
+  font-style: normal;
+}
+
+.sprint01-category b {
+  display: block;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: 20px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.sprint01-category small {
+  display: block;
+  margin-top: 5px;
+  color: var(--smoke);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.sprint01-drop {
+  min-height: 198px;
+  padding: 20px;
+  background:
+    linear-gradient(90deg, rgba(5,4,3,.92), rgba(5,4,3,.54)),
+    url("assets/48_concept_pack_AHDK.jpg") center/cover;
+}
+
+.sprint01-drop .badge {
+  margin-bottom: 12px;
+}
+
+.sprint01-drop h3 {
+  margin: 0;
+  max-width: 280px;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: 38px;
+  line-height: .92;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.sprint01-drop p {
+  margin: 10px 0 16px;
+  max-width: 300px;
+  color: rgba(239,231,216,.70);
+  font-size: 13px;
+  line-height: 1.48;
+}
+
+.sprint01-drop-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sprint01-highlight-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(116px, 1fr));
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.sprint01-highlight-row::-webkit-scrollbar {
+  display: none;
+}
+
+.sprint01-highlight {
+  min-width: 116px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(24,22,18,.96), rgba(8,7,5,.97));
+}
+
+.sprint01-highlight img {
+  width: 100%;
+  height: 96px;
+  display: block;
+  object-fit: cover;
+  filter: saturate(.86) contrast(1.04);
+}
+
+.sprint01-highlight div {
+  padding: 11px;
+}
+
+.sprint01-highlight b {
+  display: block;
+  color: var(--bone);
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.sprint01-highlight small {
+  display: block;
+  margin-top: 5px;
+  color: var(--sand-soft);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.sprint01-service-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.sprint01-service-strip span {
+  min-height: 58px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 18px;
+  background: rgba(5,4,3,.42);
+  color: var(--sand-soft);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+@media (max-width: 380px) {
+  .sprint01-category-grid,
+  .sprint01-hero-proof,
+  .sprint01-service-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .sprint01-hero {
+    min-height: 320px;
+  }
+
+  .hero-actions,
+  .sprint01-drop-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .cta,
+  .hero-actions .ghost,
+  .sprint01-drop-actions .cta,
+  .sprint01-drop-actions .ghost {
+    width: 100%;
+  }
+}
