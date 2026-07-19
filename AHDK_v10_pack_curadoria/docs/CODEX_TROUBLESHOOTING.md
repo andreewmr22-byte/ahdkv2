@@ -66,3 +66,40 @@ cat erro_codex.txt | python tools/extract_codex_403_info.py
 ```
 
 > Limitação: seleção de workspace, logout/login e limpeza de cookies ainda precisam de ação manual no navegador.
+
+
+## Não consigo vincular o workspace
+
+Se você não consegue nem selecionar/vincular o workspace, siga esta ordem exata:
+
+1. **Abra `https://chatgpt.com` e confirme a conta**
+   - Verifique o e-mail exibido no perfil.
+   - Se estiver errado, faça logout e login com o e-mail correto.
+
+2. **Aceite novamente o convite do workspace**
+   - Peça ao admin para reenviar o invite.
+   - Abra o link do convite no mesmo navegador em que vai usar o Codex.
+
+3. **Confirme vínculo em `Settings > Workspace`**
+   - O workspace precisa aparecer na lista de workspaces disponíveis.
+   - Se não aparecer, o vínculo ainda não foi concluído no backend.
+
+4. **Padronize sessão corporativa (SSO)**
+   - Se a empresa usa SSO, entre apenas com o provedor da empresa.
+   - Evite múltiplas contas simultâneas (pessoal + empresa) na mesma sessão.
+
+5. **Reset rápido de sessão do navegador**
+   - Feche todas as abas de `chatgpt.com`.
+   - Limpe cookies de `chatgpt.com` e `openai.com`.
+   - Reabra, faça login e selecione o workspace antes de abrir o Codex.
+
+6. **Teste em janela anônima e outro navegador**
+   - Se funcionar no anônimo, o problema é sessão/cookie local.
+
+### Se ainda falhar
+
+Envie para o admin/suporte:
+- Nome exato do workspace esperado.
+- Seu e-mail da conta.
+- `request id`, `cf-ray` e horário UTC do erro.
+- Mensagem completa com `invalid_workspace_selected`.
