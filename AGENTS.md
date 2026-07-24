@@ -9,8 +9,11 @@ AHDK é um MiniApp/experiência web com estética dark, urbana, premium e agress
 O app atual está concentrado principalmente em:
 
 - `AHDK_v10_pack_curadoria/index.html` — estrutura principal.
+- `AHDK_v10_pack_curadoria/homepage.html` — página de entrada alternativa.
 - `AHDK_v10_pack_curadoria/style.css` — identidade visual, layout e responsividade.
 - `AHDK_v10_pack_curadoria/app.js` — navegação, produtos, carrinho/bag, permissões e módulos internos.
+- `AHDK_v10_pack_curadoria/hardening.css` — correções de interface e ghost buttons.
+- `AHDK_v10_pack_curadoria/hardening.js` — estabilizações de clique, overlay e propagação.
 - `AHDK_v10_pack_curadoria/assets/` — imagens.
 - `AHDK_v10_pack_curadoria/data/` — exemplos de dados.
 
@@ -30,10 +33,30 @@ O usuário atua como diretor criativo/produto. Ele define essência, estética, 
 8. Em frontend, priorizar mobile, performance, legibilidade e clareza comercial.
 9. Não inserir dados sensíveis, credenciais, tokens ou números privados no código.
 10. Preservar a linguagem pública do app como editorial, premium e comercial.
+11. Não remover assets sem conferir referências em HTML, CSS e JS.
+12. Manter compatibilidade com deploy estático no Netlify.
+
+## Regras contra botões ghost
+
+- Camadas decorativas, pseudo-elementos, badges e hints devem usar `pointer-events: none` quando não forem controles.
+- Overlays devem capturar clique apenas quando estiverem visíveis e renderizados.
+- Elementos ocultos por `opacity: 0`, `visibility: hidden`, `hidden` ou `aria-hidden=true` não devem aceitar eventos.
+- Botões dentro de cards clicáveis precisam impedir propagação acidental.
+- Preferir `button type="button"` para botões que não enviam formulário.
+
+## Checklist de interface
+
+Antes de considerar uma tarefa pronta, validar:
+- Início, Catálogo, Drops, Coleções, Atendimento e BAG.
+- Menu superior, modal de produto, zoom visual e carrinho.
+- Fechamento por botão, backdrop e tecla Escape.
+- Layout mobile sem overflow horizontal.
+- Botões visíveis, com texto ou `aria-label`.
+- Nenhum elemento invisível capturando clique.
 
 ## Comandos e validação
 
-Este projeto parece ser uma aplicação estática. Quando não houver `package.json`, validar por inspeção manual e servidor estático local.
+Este projeto é uma aplicação estática. Quando não houver `package.json`, validar por inspeção manual e servidor estático local.
 
 Sugestões de validação:
 

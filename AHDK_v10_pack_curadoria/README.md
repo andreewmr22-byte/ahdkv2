@@ -46,3 +46,7 @@ whatsappNumber: "5599999999999"
 ```
 
 Use o número real com código do país e DDD.
+
+## Suporte técnico (Codex/ChatGPT)
+
+Se aparecer erro `403` com `invalid_workspace_selected`, consulte `docs/CODEX_TROUBLESHOOTING.md`. Também existe o utilitário `tools/extract_codex_403_info.py` para automatizar a triagem do erro. O guia também cobre o cenário de não conseguir vincular/selecionar workspace.

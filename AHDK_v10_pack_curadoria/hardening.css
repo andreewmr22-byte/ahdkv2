@@ -1,0 +1,103 @@
+/* AHDK UI HARDENING
+   Neutraliza botões ghost, overlays decorativos e hitboxes invisíveis
+   sem alterar a identidade visual principal do app. */
+
+body.ahdk-modal-open {
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+.brand-logo-top,
+.catalog-overview-head img,
+.catalog-hub-head img,
+.hero-media img,
+.tap-hint,
+.zoom-hint,
+.explorer-orbit,
+.explorer-particle {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hero-media img,
+.product-card::after,
+.product-card.in-cart::after,
+.interactive-card::after,
+.interactive-item::after,
+.interactive-report::after,
+.low-stock-card::before,
+.low-stock-item::before,
+.explorer-stage::before,
+.explorer-stage::after,
+.explorer-orbit,
+.explorer-particle,
+.tap-hint,
+.zoom-hint {
+  pointer-events: none !important;
+}
+
+.hero-media img:not(.active) {
+  visibility: hidden;
+}
+
+.product-modal-backdrop,
+.detail-backdrop,
+.cart-backdrop,
+.image-zoom-backdrop,
+.catalog-hub-backdrop {
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.product-modal,
+.detail-modal,
+.cart-drawer,
+.image-zoom,
+.catalog-hub {
+  pointer-events: auto;
+  touch-action: auto;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  pointer-events: none !important;
+  cursor: not-allowed;
+  opacity: .52;
+}
+
+button[data-ahdk-ghost-suppressed="1"],
+a[data-ahdk-ghost-suppressed="1"],
+[role="button"][data-ahdk-ghost-suppressed="1"],
+[onclick][data-ahdk-ghost-suppressed="1"] {
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+button,
+[role="button"],
+a,
+.header-menu,
+.header-cart,
+.nav,
+.cart-btn,
+.mini-cart,
+.modal-cart,
+.modal-ghost,
+.modal-close,
+.carousel-arrow,
+.check-action,
+.action-btn,
+.delete-btn {
+  touch-action: manipulation;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
